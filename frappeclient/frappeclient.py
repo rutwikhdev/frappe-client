@@ -141,7 +141,7 @@ class FrappeClient(object):
 		:param doc: dict or Document object to be submitted remotely'''
 		return self.post_request({
 			'cmd': 'frappe.client.submit',
-			'doclist': json.dumps(doclist)
+			'doc': json.dumps(doclist)
 		})
 
 	def get_value(self, doctype, fieldname=None, filters=None):
